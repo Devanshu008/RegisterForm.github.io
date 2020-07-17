@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container-fluid bg-dark">
+            <div class="row">
+                <div class="col-xxl-12 text-center my-5">
+                    <h1 class="text-white">Register Form</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container my-5">
+        <form class="row g-3 needs-validation" name="myform" novalidate>
+            <div class="col-lg-6 col-md-6 col-12 col-xs-12 col-sm-3 ">
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please Enter A First name.
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 col-xs-12 col-sm-3 ">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please Enter A Last Name.
+                </div>
+            </div>
+            
+            <div class="col-lg-12 col-md-12 col-12 col-xs-12 col-sm-3 ">
+                <label for="validationCustomUsername" class="form-label">Email</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="inputGroupPrepend">Email here</span>
+                    <input type="email" class="form-control" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Please provide a email.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-12 col-xs-12 col-sm-3 ">
+                <label for="validationCustomUsername" class="form-label">Adress</label>
+                <div class="input-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" aria-describedby="inputGroupPrepend" required rows="3"></textarea>
+                    <div class="invalid-feedback">
+                        Please provide a Adress.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4 col-12 col-xs-12 col-sm-3 ">
+                <label for="validationCustom04" class="form-label">City</label>
+                <select class="form-select" id="validationCustom04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>rajkot</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid city.
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4 col-12 col-xs-12 col-sm-3 ">
+                <label for="validationCustom05" class="form-label">Password</label>
+                <input type="password" class="form-control" id="validationCustom06" required>
+                <div class="invalid-feedback">
+                    Please provide a password.
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4 col-12 col-xs-12 col-sm-3 ">
+                <label for="validationCustom06" class="form-label">Number</label>
+                <input type="number" class="form-control" id="validationCustom05" required>
+                <div class="invalid-feedback">
+                    Please provide a number.
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 col-xs-12 col-sm-3 ">
+                <label for="validationCustom06" class="form-label">Gender</label>
+                <div class="form-check">
+                    
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1" required>
+                        <label class="form-check-label" for="inlineRadio1">Female</label>
+                     
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2" required>
+                        <label class="form-check-label" for="inlineRadio2">Male</label>
+                        <div class="invalid-feedback">
+                            Please provide a Gender.
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-12 col-xs-12 col-sm-3 ">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-12 col-xs-12 col-sm-12  ">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+        </form>
+    </section>
+
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+           
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+
+                })
+        })()
+    </script>
+</body>
+
+</html>
